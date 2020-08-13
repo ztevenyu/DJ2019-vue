@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>VUE TEST</title>
+    <!-- 引入外部的样式文件 -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- 引入Element UI样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" />
+    <!-- 使用CDN引入Vue模块-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <!-- 引入Element组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- 引入axios组件库 -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-header style="height: 80px;">数据分析系统</el-header>
+            <el-container>
+                <el-aside width="180px">
+                    <!--侧菜单-->
+                    <el-menu default-active="1" class="el-menu-vertical-demo" background-color="#4A5259"
+                        text-color="#fff" active-text-color="#ffd04b">
+                        <el-menu-item index="1">
+                            <i class="el-icon-s-data"></i>
+                            <span slot="title">导航一</span>
+                        </el-menu-item>
+                        <el-menu-item index="2">
+                            <i class="el-icon-data-analysis"></i>
+                            <span slot="title">导航二</span>
+                        </el-menu-item>
+                        <el-menu-item index="3">
+                            <i class="el-icon-document"></i>
+                            <span slot="title">导航三</span>
+                        </el-menu-item>
+                        <el-menu-item index="4">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">导航四</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-aside>
+                <el-main>
+                    <!--面包屑标签-->
+                    <el-breadcrumb separator-class="el-icon-arrow-right">
+                        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                        <el-breadcrumb-item>查询</el-breadcrumb-item>
+                    </el-breadcrumb>
+                    <!--查询条件-->
+                    <el-form :inline="true" style="margin-top: 20px;">
+                        <el-row :gutter="20">
+                            <el-col :span="10">
+                                <el-form-item>
+                                  
+
+                                </el-form-item>
+                            </el-col>
+                            <el-col :span="12" style="padding: right 100px;">
+
+                            </el-col>
+                        </el-row>
+                    </el-form>
+                    <!--表格-->
+
+                    <!--分页-->
+
+                </el-main>
+            </el-container>
+        </el-container>
+    </div>
+</body>
+
+</html>
+<script src="./js/index.js"></script>
